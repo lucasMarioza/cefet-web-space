@@ -48,3 +48,15 @@ const imagens = [
     }
   ];
 
+let i = 0;
+
+function mudarImagem(direcao) {
+  const contImagens = imagens.length
+  i = (i + direcao + contImagens) % contImagens;
+
+  const { arquivo, descricao } = imagens[i];
+
+  const slide = document.getElementById('slide');
+  slide.src = `${servidorDasImagens}/${arquivo}`;
+  slide.alt = descricao;
+}
