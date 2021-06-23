@@ -11,3 +11,7 @@ function calcular() {
 
   document.getElementById('resultado').value = resultado
 }
+
+const botao = document.getElementById('calcular');
+
+botao.addEventListener('click', calcular);

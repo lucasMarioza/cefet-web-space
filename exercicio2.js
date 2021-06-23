@@ -60,3 +60,9 @@ function mudarImagem(direcao) {
   slide.src = `${servidorDasImagens}/${arquivo}`;
   slide.alt = descricao;
 }
+
+const botaoAnterior = document.getElementById('anterior');
+const botaoProximo = document.getElementById('proximo');
+
+botaoAnterior.addEventListener('click', () => mudarImagem(-1));
+botaoProximo.addEventListener('click', () => mudarImagem(1));
